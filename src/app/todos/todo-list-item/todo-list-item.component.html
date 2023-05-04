@@ -1,0 +1,7 @@
+<mat-card class="todoItem">
+    <mat-card-content>
+        <mat-checkbox [checked]="isDone" [ngClass]="isDone ? 'todoDone' : ''" (change)="onTodoDone()">
+            {{name}}
+        </mat-checkbox>
+    </mat-card-content>
+</mat-card>

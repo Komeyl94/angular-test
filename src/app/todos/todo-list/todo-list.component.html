@@ -1,0 +1,4 @@
+<ul class="todosList">
+    <app-todo-list-item *ngFor="let todo of todos; let i = index" [name]="todo.name" [isDone]="todo.isDone"
+        [index]="i"></app-todo-list-item>
+</ul>

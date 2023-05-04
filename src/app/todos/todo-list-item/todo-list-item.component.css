@@ -1,0 +1,6 @@
+.todoItem {
+    margin-bottom: 10px;
+}
+.todoDone {
+    text-decoration: line-through;
+}

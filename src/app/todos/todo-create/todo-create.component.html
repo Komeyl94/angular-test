@@ -1,0 +1,8 @@
+<form class="example-form" #ctrl="ngForm">
+    <mat-form-field class="example-full-width">
+        <mat-label>Todo Name</mat-label>
+        <input matInput placeholder="Enter todo name" name="todoName" #todoName>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" [ngStyle]="{'width': '100%'}" (click)="addNewTodo(todoName.value)">Add Todo</button>
+</form>

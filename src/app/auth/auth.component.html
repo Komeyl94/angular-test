@@ -1,0 +1,35 @@
+<mat-grid-list cols="2">
+    <mat-grid-tile>
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>Login Form</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    <mat-form-field [ngStyle]="{'width': '100%'}">
+                        <mat-label>Email</mat-label>
+                        <input matInput id="email" type="email" [ngStyle]="{'width': '100%'}" required
+                            formControlName="email">
+
+                        <mat-error
+                            *ngIf="loginForm.controls.email.invalid && (loginForm.controls.email.dirty || loginForm.controls.email.touched)">
+                            Email must is required and must be greater than 8 charecters
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field [ngStyle]="{'width': '100%'}">
+                        <mat-label>Password</mat-label>
+                        <input matInput id="password" type="password" [ngStyle]="{'width': '100%'}" required
+                            formControlName="password">
+
+                        <mat-error
+                            *ngIf="loginForm.controls.password.invalid && (loginForm.controls.password.dirty || loginForm.controls.password.touched)">
+                            Password is invalid, must be at least 6 characters
+                        </mat-error>
+                    </mat-form-field>
+
+                    <button mat-raised-button color="primary" type="submit" [ngStyle]="{'width': '100%'}">Login</button>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>
